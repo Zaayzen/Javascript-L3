@@ -17,7 +17,7 @@ function placeShip(board, ship, row, col, direction) {
   const length = ship.getLength();
 
   for(let i = 0; i < length; i++){
-    const r = direction === "verticale" ? row + i : row;
+    const r = direction === "vertical" ? row + i : row;
     const c = direction === "horizontal" ? col + i : col;
 
     board[r][c].ship = ship;
