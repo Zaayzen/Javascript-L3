@@ -1,0 +1,30 @@
+function createBoard(size) {
+  // TODO 2
+  const board = [];
+
+  for(let row = 0; row < size; row++){
+    const rowArray = [];
+    for(let col = 0; col < size; col++){
+      rowArray.push({ship : null, shot : false});
+    }
+    board.push(rowArray);
+  }
+  return board;
+}
+
+function placeShip(board, ship, row, col, direction) {
+  // TODO 3
+  const length = ship.getLength();
+
+  for(let i = 0; i < length; i++){
+    const r = direction === "verticale" ? row + i : row;
+    const c = direction === "horizontal" ? col + i : col;
+
+    board[r][c].ship = ship;
+  }
+  return board;
+}
+
+function shoot(board, row, col) {
+  // TODO 4
+}
