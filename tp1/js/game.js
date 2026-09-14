@@ -14,14 +14,14 @@ function createDefaultFleet() {
   },
   {
     ship: createShip("Destroyer", 2),
-    row: 2,
-    col: 5,
+    row: 5,
+    col: 1,
     direction: "vertical"
   },
   {
     ship: createShip("Patrouilleur", 2),
-    row:2,
-    col:7,
+    row:7,
+    col:4,
     direction: "horizontal"
   }
   ];
