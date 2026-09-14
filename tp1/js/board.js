@@ -27,4 +27,20 @@ function placeShip(board, ship, row, col, direction) {
 
 function shoot(board, row, col) {
   // TODO 4
+  const cell = board[row][col];
+  if(cell.shot){
+    return {status: "already-shot", ship: null};
+  }
+  cell.shot = true;
+
+  if(cell.ship === null){
+    return {
+      status: "miss", ship: null
+    }
+  }
+  cell.ship.hit();
+  if(cell.ship.isSunk()){
+    return {status: "sunk", ship: cell.ship};
+  }
+  return {status: "hit", ship: cell.ship};
 }
