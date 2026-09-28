@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Tester le contrôleur</title><link rel="stylesheet" href="style.css"></head>
+<body><main><h1>Tester le contrôleur</h1>
+<p>Ouvrir cette page par double-clic. Lancez les tests avant de manipuler les cartes. Après une modification, rechargez la page.</p>
+<button id="run-tests" type="button">Lancer les tests</button>
+<button id="test-extra" type="button">Tester Rejouer (exercice 4)</button><pre id="test-results" style="white-space:pre-wrap;line-height:1.5">Les résultats apparaîtront ici.</pre>
+<p id="stats"></p><p id="message"></p><div id="cards"></div><button id="restart" type="button">Nouvelle partie</button><button id="replay" type="button" hidden>Rejouer (exercice 4)</button></main>
+<script src="game.js"></script>
+<script src="view.js"></script>
+<script src="main.js"></script>
+<script src="test-utils.js"></script>
+<script src="tests-controleur.js"></script>
+<script>
+document.querySelector("#run-tests").addEventListener("click", function () {
+  this.disabled = true;
+  runSuite(controllerChecks());
+});
+document.querySelector("#test-extra").addEventListener("click", function () { this.disabled = true; runSuite(replayControllerChecks()); });
+</script>
+</body></html>

@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Tester la vue seule</title><link rel="stylesheet" href="style.css"></head>
+<body><main><h1>Tester la vue seule</h1>
+<p>Ouvrir cette page par double-clic. Lancez les tests avant de manipuler les cartes. Après une modification, rechargez la page.</p>
+<button id="run-tests" type="button">Lancer les tests</button>
+<pre id="test-results" style="white-space:pre-wrap;line-height:1.5">Les résultats apparaîtront ici.</pre>
+<p id="stats"></p><p id="message"></p><div id="cards"></div><button id="restart" type="button">Nouvelle partie</button><button id="replay" type="button" hidden>Rejouer (exercice 4)</button></main>
+<script src="view.js"></script>
+<script src="test-utils.js"></script>
+<script src="tests-vue.js"></script>
+<script>
+document.querySelector("#run-tests").addEventListener("click", function () {
+  this.disabled = true;
+  runSuite(viewChecks());
+});
+</script>
+</body></html>

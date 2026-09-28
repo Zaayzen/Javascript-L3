@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Memory solo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header><p class="course">L3 · JavaScript</p><h1>Memory solo</h1></header>
+    <p class="intro">Retrouvez les huit paires en un minimum d'essais.</p>
+    <p id="stats">Essais : 0 — Paires : 0 / 8</p>
+    <p id="message" aria-live="polite">Choisissez une carte.</p>
+    <div id="cards" aria-label="Cartes du Memory"></div>
+    <button id="restart" type="button">Nouvelle partie</button>
+    <button id="replay" type ="button">Rejouer </button >
+    <p class="help">Deux cartes différentes restent visibles jusqu'au choix d'une nouvelle carte cachée.</p>
+  </main>
+  <script src="game.js"></script>
+  <script src="view.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
